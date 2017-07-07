@@ -32,7 +32,18 @@ dependencies {
     implementation "${libs.support_design}"
     implementation "${libs.support_compat}"
     implementation "${libs.support_constraint}"
+    implementation "${libs.dagger}"
+    implementation "${libs.rxjava}"
+    implementation "${libs.rxandroid}"
+
+    //annotation processors
+    annotationProcessor "${libs.dagger_compiler}"
+
+    //provided
+    provided "${libs.javax_annotation}"
 
     //test dependencies
     testImplementation "$libs.junit"
+    testImplementation "$libs.mockito"
+    testImplementation "$libs.robolectric"
 }
