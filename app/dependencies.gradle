@@ -1,0 +1,19 @@
+ext.version = [
+        //app dependencies
+        support           : "26.0.0-beta2",
+        support_constraint: "1.0.2",
+
+        //test dependencies
+        junit             : "4.12"
+]
+
+def version = ext.version
+ext.library = [
+        //app dependencies
+        support_design    : "com.android.support:design:${version.support}",
+        support_compat    : "com.android.support:appcompat-v7:${version.support}",
+        support_constraint: "com.android.support.constraint:constraint-layout:${version.support_constraint}",
+
+        //test dependencies
+        junit             : "junit:junit:${version.junit}"
+]

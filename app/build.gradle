@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+apply from: "../app/configuration.gradle"
+apply from: "../app/dependencies.gradle"
+
+def libs = ext.library
+def config = ext.configuration
+
+android {
+    compileSdkVersion config.compileSdk
+    buildToolsVersion config.buildTools
+    defaultConfig {
+        applicationId config.appId
+        minSdkVersion config.minSdk
+        targetSdkVersion config.targetSdk
+        versionCode config.buildVersionCode
+        versionName config.buildVersionName
+        testInstrumentationRunner config.instrumentationRunner
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //app_dependencies
+    implementation "${libs.support_design}"
+    implementation "${libs.support_compat}"
+    implementation "${libs.support_constraint}"
+
+    //test dependencies
+    testImplementation "$libs.junit"
+}
