@@ -8,11 +8,14 @@ import android.app.Application;
 
 public class MyMobileWalletApplication extends Application {
 
+    private static MyMobileWalletApplication INSTANCE;
+
     private AppComponent appComponent;
 
     @Override
     public void onCreate() {
         super.onCreate();
+        INSTANCE = this;
 
         appComponent = DaggerAppComponent.builder()
                 .appModule(new AppModule(this))
@@ -21,5 +24,9 @@ public class MyMobileWalletApplication extends Application {
 
     public AppComponent getAppComponent() {
         return appComponent;
+    }
+
+    public static MyMobileWalletApplication getInstance() {
+        return INSTANCE;
     }
 }

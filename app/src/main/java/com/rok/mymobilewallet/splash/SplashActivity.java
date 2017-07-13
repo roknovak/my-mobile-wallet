@@ -27,7 +27,7 @@ public class SplashActivity extends BaseActivity<ActivitySplashBinding, SplashCo
     @Override
     protected void setupDaggerComponent() {
         DaggerSplashComponent.builder()
-                .splashModule(new SplashModule(this))
+                .splashModule(new SplashModule())
                 .build()
                 .inject(this);
     }

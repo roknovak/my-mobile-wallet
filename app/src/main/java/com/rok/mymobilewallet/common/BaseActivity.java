@@ -25,6 +25,7 @@ public abstract class BaseActivity<V extends ViewDataBinding, P extends BaseCont
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, getLayout());
         setupDaggerComponent();
+        presenter.onTakeView(this);
     }
 
     @Override

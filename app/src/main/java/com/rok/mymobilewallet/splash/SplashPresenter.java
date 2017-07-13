@@ -9,14 +9,14 @@ import com.rok.mymobilewallet.common.BasePresenter;
  * Created by Rok on 8. 07. 2017.
  */
 
-public class SplashPresenter extends BasePresenter<SplashContract.View> implements SplashContract.Presenter {
+public class SplashPresenter extends BasePresenter<SplashContract.View> implements SplashContract.Presenter<SplashContract.View> {
     private static final long DELAY = 1000;
 
     private Handler handler;
     private Runnable runnable;
 
-    public SplashPresenter(SplashContract.View view) {
-        super(view);
+    public SplashPresenter() {
+        super();
         startHandler();
     }
 

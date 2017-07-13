@@ -38,8 +38,11 @@ dependencies {
     implementation "${libs.dagger}"
     implementation "${libs.rxjava}"
     implementation "${libs.rxandroid}"
+    implementation "${libs.room}"
+    implementation "${libs.room_java_rx}"
 
     //annotation processors
+    annotationProcessor "${libs.room_compiler}"
     annotationProcessor "${libs.dagger_compiler}"
 
     //provided

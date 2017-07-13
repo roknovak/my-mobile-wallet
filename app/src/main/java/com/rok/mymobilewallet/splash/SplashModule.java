@@ -12,21 +12,9 @@ import dagger.Provides;
 @Module
 public class SplashModule {
 
-    private SplashContract.View view;
-
-    public SplashModule(SplashContract.View view) {
-        this.view = view;
-    }
-
     @Provides
     @Singleton
-    SplashContract.View providesSplashView() {
-        return view;
-    }
-
-    @Provides
-    @Singleton
-    SplashContract.Presenter providesSplashPresenter(SplashContract.View view) {
-        return new SplashPresenter(view);
+    SplashContract.Presenter providesSplashPresenter() {
+        return new SplashPresenter();
     }
 }

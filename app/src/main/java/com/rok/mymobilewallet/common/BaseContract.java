@@ -10,7 +10,9 @@ public interface BaseContract {
 
     }
 
-    interface Presenter {
+    interface Presenter<T extends BaseContract.View> {
+        void onTakeView(T view);
+
         void onDetach();
     }
 }

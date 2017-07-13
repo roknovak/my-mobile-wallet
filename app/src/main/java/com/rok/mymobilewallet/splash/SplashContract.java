@@ -12,7 +12,7 @@ public interface SplashContract {
         void startMainActivity();
     }
 
-    interface Presenter extends BaseContract.Presenter {
+    interface Presenter<V extends BaseContract.View> extends BaseContract.Presenter<V> {
 
     }
 }
