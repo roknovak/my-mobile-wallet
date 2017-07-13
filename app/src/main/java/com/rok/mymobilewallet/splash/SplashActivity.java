@@ -1,9 +1,6 @@
 package com.rok.mymobilewallet.splash;
 
-import android.os.Bundle;
-import android.os.Handler;
 import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
 
 import com.rok.mymobilewallet.R;
 import com.rok.mymobilewallet.common.BaseActivity;
