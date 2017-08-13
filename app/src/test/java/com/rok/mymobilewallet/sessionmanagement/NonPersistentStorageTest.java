@@ -14,32 +14,32 @@ import java.util.Map;
  * Created by Rok on 2. 08. 2017.
  */
 @RunWith(CustomTestRunner.class)
-public class NonPersistentSessionTest {
+public class NonPersistentStorageTest {
 
     private static final String KEY_STRING_1 = "key_string_1";
     private static final String KEY_STRING_2 = "key_string_2";
     private static final String VALUE_STRING_1 = "value_string_1";
     private static final String VALUE_STRING_2 = "value_string_2";
 
-    private NonPersistentStorage session;
+    private NonPersistentStorage storage;
 
     @Before
     public void setup() {
-        session = new NonPersistentStorage();
+        storage = new NonPersistentStorage();
     }
 
     @Test
     public void shouldConstructorCreateHashMap() {
-        Assert.assertNotNull(session.getMap());
+        Assert.assertNotNull(storage.getMap());
     }
 
     @Test
     public void shouldReturnValueWhenGetDataIsCalled() {
         //ARRANGE
-        session.getMap().put(KEY_STRING_1, VALUE_STRING_1);
+        storage.getMap().put(KEY_STRING_1, VALUE_STRING_1);
 
         //ACT
-        String actual = session.getData(KEY_STRING_1, String.class);
+        String actual = storage.get(KEY_STRING_1, String.class);
 
         //ASSERT
         Assert.assertEquals(VALUE_STRING_1, actual);
@@ -48,26 +48,26 @@ public class NonPersistentSessionTest {
     @Test
     public void shouldSaveObjectWhenStoreDataIsCalled() {
         //ACT
-        session.storeData(KEY_STRING_1, VALUE_STRING_1);
-        session.storeData(KEY_STRING_2, VALUE_STRING_2);
+        storage.save(KEY_STRING_1, VALUE_STRING_1);
+        storage.save(KEY_STRING_2, VALUE_STRING_2);
 
         //ASSERT
-        Assert.assertEquals(VALUE_STRING_1, session.getData(KEY_STRING_1, String.class));
-        Assert.assertEquals(VALUE_STRING_2, session.getData(KEY_STRING_2, String.class));
+        Assert.assertEquals(VALUE_STRING_1, storage.get(KEY_STRING_1, String.class));
+        Assert.assertEquals(VALUE_STRING_2, storage.get(KEY_STRING_2, String.class));
     }
 
     @Test
     public void shouldRemoveAllValuesFromSharedPreferencesWhenClearIsCalled() {
         //ARRANGE
-        Map<String, Object> map = session.getMap();
+        Map<String, Object> map = storage.getMap();
         map.put(KEY_STRING_1, VALUE_STRING_1);
         map.put(KEY_STRING_2, VALUE_STRING_2);
 
         //ACT
-        session.clear();
+        storage.clear();
 
         //ASSERT
-        Assert.assertNull(session.getData(KEY_STRING_1, String.class));
-        Assert.assertNull(session.getData(KEY_STRING_2, String.class));
+        Assert.assertNull(storage.get(KEY_STRING_1, String.class));
+        Assert.assertNull(storage.get(KEY_STRING_2, String.class));
     }
 }

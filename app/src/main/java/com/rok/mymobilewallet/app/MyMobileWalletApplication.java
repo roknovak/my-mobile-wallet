@@ -2,6 +2,8 @@ package com.rok.mymobilewallet.app;
 
 import android.app.Application;
 
+import com.rok.mymobilewallet.sessionmanagement.Session;
+
 /**
  * Created by Rok on 8. 07. 2017.
  */
@@ -20,6 +22,8 @@ public class MyMobileWalletApplication extends Application {
         appComponent = DaggerAppComponent.builder()
                 .appModule(new AppModule(this))
                 .build();
+
+        Session.checkForActiveSession();
     }
 
     public AppComponent getAppComponent() {

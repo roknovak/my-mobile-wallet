@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.rok.mymobilewallet.app.MyMobileWalletApplication;
-import com.rok.mymobilewallet.login.LoginActivity;
 import com.rok.mymobilewallet.splash.SplashActivity;
 
 /**

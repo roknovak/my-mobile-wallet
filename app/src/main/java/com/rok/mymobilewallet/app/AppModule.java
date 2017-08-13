@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 
+import com.google.gson.Gson;
 import com.rok.mymobilewallet.room.ExpenseDataSource;
 import com.rok.mymobilewallet.room.MyMobileWalletDatabase;
 
@@ -31,6 +32,12 @@ public class AppModule {
     @Provides
     Context providesAppContext() {
         return application.getApplicationContext();
+    }
+
+    @Provides
+    @Singleton
+    Gson providesGson() {
+        return new Gson();
     }
 
     @Provides
