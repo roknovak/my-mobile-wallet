@@ -1,5 +1,8 @@
 package com.rok.mymobilewallet.main;
 
+import android.view.MenuItem;
+import android.view.View;
+
 import com.rok.mymobilewallet.common.BaseContract;
 import com.rok.mymobilewallet.entity.Expense;
 
@@ -22,5 +25,8 @@ public interface MainContract {
 
     interface Presenter<V extends BaseContract.View> extends BaseContract.Presenter<V> {
 
+        void onClick(android.view.View view);
+
+        boolean onOptionsItemSelected(MenuItem item);
     }
 }

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.rok.mymobilewallet.R;
@@ -21,22 +23,35 @@ import java.util.List;
 
 import javax.inject.Inject;
 
-public class MainActivity extends ToolbarActivity<ActivityMainBinding, MainContract.Presenter> implements MainContract.View {
+public class MainActivity extends ToolbarActivity<ActivityMainBinding, MainContract.Presenter> implements MainContract.View, View.OnClickListener {
 
-    @Inject
-    MainContract.Presenter presenter;
+    @LayoutRes
+    private final static int LAYOUT = R.layout.activity_main;
 
     @Inject
     RecyclerViewAdapter<Expense, ExpenseViewHolder> adapter;
 
     public static void startActivity(Context context) {
-        context.startActivity(new Intent(context, MainActivity.class));
+        Intent intent = new Intent(context, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setupActivity();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return presenter.onOptionsItemSelected(item) || super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -59,7 +74,7 @@ public class MainActivity extends ToolbarActivity<ActivityMainBinding, MainContr
     @Override
     @LayoutRes
     protected int getLayout() {
-        return R.layout.activity_main;
+        return LAYOUT;
     }
 
     @Override
@@ -71,7 +86,13 @@ public class MainActivity extends ToolbarActivity<ActivityMainBinding, MainContr
                 .inject(this);
     }
 
+    @Override
+    public void onClick(View view) {
+        presenter.onClick(view);
+    }
+
     private void setupActivity() {
+        binding.setListener(this);
         binding.rvExpenses.setLayoutManager(new LinearLayoutManager(this));
         binding.rvExpenses.setAdapter(adapter);
     }
