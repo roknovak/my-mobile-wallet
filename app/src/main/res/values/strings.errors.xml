@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- ========================================== -->
+    <!-- Login                                      -->
+    <!-- ========================================== -->
+
+    <string name="error_username_too_long">Username is too long.</string>
+    <string name="error_password_too_long">Password is too long.</string>
+    <string name="error_username_too_short">Username is too short.</string>
+    <string name="error_password_too_short">Password is too short.</string>
+
+    <string name="error_username_or_password_invalid">Username or password is invalid</string>
+    <string name="error_username_unsupported_chars">The username should contain only letters and numbers</string>
+
+    <!-- ========================================== -->
+    <!-- New expense                                -->
+    <!-- ========================================== -->
+
+    <string name="error_insert_title">Insert title</string>
+    <string name="error_insert_amount">Insert amount</string>
+
+</resources>

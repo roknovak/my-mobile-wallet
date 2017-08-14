@@ -41,7 +41,7 @@ public abstract class Validator {
         return result;
     }
 
-    private String getSRotring(@StringRes int string) {
+    private String getString(@StringRes int string) {
         return MyMobileWalletApplication.getInstance().getString(string);
     }
 }
