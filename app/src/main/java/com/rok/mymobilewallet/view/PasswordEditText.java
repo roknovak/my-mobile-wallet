@@ -1,6 +1,7 @@
 package com.rok.mymobilewallet.view;
 
 import android.content.Context;
+import android.text.InputType;
 import android.util.AttributeSet;
 
 import com.rok.mymobilewallet.R;
@@ -31,7 +32,15 @@ public class PasswordEditText extends ValidateEditText {
         init();
     }
 
+    @Override
+    public int getInputType() {
+        return InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD;
+    }
+
     private void init() {
+        setPasswordVisibilityToggleEnabled(true);
+        setHint(getResources().getString(R.string.hint_password));
+
         addValidator(new MaxLengthValidator(R.string.error_password_too_long, MAX_LENGTH));
         addValidator(new MinLengthValidator(R.string.error_password_too_short, MIN_LENGTH));
     }

@@ -1,6 +1,7 @@
 package com.rok.mymobilewallet.view;
 
 import android.content.Context;
+import android.text.InputType;
 import android.util.AttributeSet;
 
 import com.rok.mymobilewallet.R;
@@ -33,7 +34,14 @@ public class UsernameEditText extends ValidateEditText {
         init();
     }
 
+    @Override
+    public int getInputType() {
+        return InputType.TYPE_TEXT_VARIATION_NORMAL;
+    }
+
     private void init() {
+        setHint(getResources().getString(R.string.hint_username));
+
         addValidator(new MaxLengthValidator(R.string.error_username_too_long, MAX_LENGTH));
         addValidator(new MinLengthValidator(R.string.error_username_too_short, MIN_LENGTH));
         addValidator(new RegexValidator(R.string.error_username_unsupported_chars, REGEX_PATTERN));

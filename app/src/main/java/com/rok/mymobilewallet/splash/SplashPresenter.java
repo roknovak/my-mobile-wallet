@@ -3,6 +3,9 @@ package com.rok.mymobilewallet.splash;
 import android.os.Handler;
 
 import com.rok.mymobilewallet.common.BasePresenter;
+import com.rok.mymobilewallet.sessionmanagement.Session;
+import com.rok.mymobilewallet.sessionmanagement.Storage;
+import com.rok.mymobilewallet.utils.BundleUtil;
 
 
 /**
@@ -10,14 +13,22 @@ import com.rok.mymobilewallet.common.BasePresenter;
  */
 
 public class SplashPresenter extends BasePresenter<SplashContract.View> implements SplashContract.Presenter<SplashContract.View> {
-    private static final long DELAY = 1000;
+
+    private final static long DELAY = 1000;
 
     private Handler handler;
     private Runnable runnable;
 
-    public SplashPresenter() {
-        super();
-        startHandler();
+    @Override
+    public void onTakeView(SplashContract.View view) {
+        super.onTakeView(view);
+
+        final boolean showAnimation = view.shouldShowAnimation();
+        if (showAnimation) {
+            startHandler();
+        } else {
+            startNextActivity();
+        }
     }
 
     @Override
@@ -27,22 +38,30 @@ public class SplashPresenter extends BasePresenter<SplashContract.View> implemen
     }
 
     private void startHandler() {
-        if(handler == null) {
+        if (handler == null) {
             handler = new Handler();
         }
-        if(runnable == null) {
+        if (runnable == null) {
             runnable = new Runnable() {
                 @Override
                 public void run() {
-                    view.startMainActivity();
+                    startNextActivity();
                 }
             };
         }
         handler.postDelayed(runnable, DELAY);
     }
 
+    private void startNextActivity() {
+        if (Session.isTokenValid()) {
+            view.startMainActivity();
+        } else {
+            view.startLoginActivity();
+        }
+    }
+
     private void stopHandler() {
-        if(handler != null && runnable != null) {
+        if (handler != null && runnable != null) {
             handler.removeCallbacks(runnable);
         }
     }
