@@ -7,6 +7,7 @@ ext.version = [
         rxjava            : "2.1.0",
         rxandroid         : "2.0.1",
         room              : "1.0.0-alpha1",
+        gson              : "2.8.0",
 
         //test dependencies
         junit             : "4.12",
@@ -31,6 +32,8 @@ ext.library = [
         room              : "android.arch.persistence.room:runtime:${version.room}",
         room_java_rx      : "android.arch.persistence.room:rxjava2:${version.room}",
         room_compiler     : "android.arch.persistence.room:compiler:${version.room}",
+
+        gson              : "com.google.code.gson:gson:${version.gson}",
 
         //test dependencies
         junit             : "junit:junit:${version.junit}",
