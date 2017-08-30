@@ -1,5 +1,10 @@
 package com.rok.mymobilewallet.app;
 
+import android.content.SharedPreferences;
+
+import com.google.gson.Gson;
+import com.rok.mymobilewallet.expensedetails.ExpenseDetailsPresenter;
+
 import javax.inject.Singleton;
 
 import dagger.Component;
@@ -10,5 +15,9 @@ import dagger.Component;
 @Singleton
 @Component(modules = AppModule.class)
 public interface AppComponent {
+    Gson gson();
 
+    SharedPreferences preferences();
+
+    void inject(ExpenseDetailsPresenter expenseDetailsPresenter);
 }
