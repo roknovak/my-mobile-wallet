@@ -3,6 +3,8 @@ package com.rok.mymobilewallet.viewholder;
 import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
 
+import com.rok.mymobilewallet.common.RecyclerViewAdapter;
+
 /**
  * Created by Rok on 12. 07. 2017.
  */
@@ -16,5 +18,5 @@ public abstract class BaseViewHolder<B extends ViewDataBinding, T> extends Recyc
         this.binding = binding;
     }
 
-    public abstract void bind(T t);
+    public abstract void bind(T t, RecyclerViewAdapter.ItemClickListener<T> listener);
 }

@@ -1,5 +1,6 @@
 package com.rok.mymobilewallet.viewholder;
 
+import com.rok.mymobilewallet.common.RecyclerViewAdapter;
 import com.rok.mymobilewallet.databinding.ListItemExpenseBinding;
 import com.rok.mymobilewallet.entity.Expense;
 
@@ -14,8 +15,9 @@ public class ExpenseViewHolder extends BaseViewHolder<ListItemExpenseBinding, Ex
     }
 
     @Override
-    public void bind(Expense expense) {
+    public void bind(Expense expense, RecyclerViewAdapter.ItemClickListener<Expense> listener) {
         binding.setExpense(expense);
+        binding.setListener(listener);
         binding.executePendingBindings();
     }
 }
