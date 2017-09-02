@@ -3,8 +3,10 @@ package com.rok.mymobilewallet.main;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.rok.mymobilewallet.R;
 import com.rok.mymobilewallet.common.RecyclerViewAdapter;
 import com.rok.mymobilewallet.databinding.ListItemExpenseBinding;
+import com.rok.mymobilewallet.entity.EmptyState;
 import com.rok.mymobilewallet.entity.Expense;
 import com.rok.mymobilewallet.room.ExpenseDataSource;
 import com.rok.mymobilewallet.viewholder.ExpenseViewHolder;
@@ -35,6 +37,14 @@ public class MainModule {
             public ExpenseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
                 ListItemExpenseBinding binding = ListItemExpenseBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
                 return new ExpenseViewHolder(binding);
+            }
+
+            @Override
+            public EmptyState getEmptyState() {
+                final EmptyState emptyState = new EmptyState();
+                emptyState.setIcon(R.drawable.ic_no_expenses);
+                emptyState.setTitle(R.string.no_expenses);
+                return emptyState;
             }
         };
     }

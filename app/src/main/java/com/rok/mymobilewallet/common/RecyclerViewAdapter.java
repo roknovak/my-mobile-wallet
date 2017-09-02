@@ -3,6 +3,7 @@ package com.rok.mymobilewallet.common;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
+import com.rok.mymobilewallet.entity.EmptyState;
 import com.rok.mymobilewallet.viewholder.BaseViewHolder;
 
 import java.util.ArrayList;
@@ -48,7 +49,7 @@ public abstract class RecyclerViewAdapter<T, VH extends BaseViewHolder> extends 
     public void setOnDataChangeListener(DataChangeListener dataChangeListener) {
         this.dataChangeListener = dataChangeListener;
     }
-    
+
     public ItemClickListener getItemClickListener() {
         return itemClickListener;
     }
@@ -56,9 +57,6 @@ public abstract class RecyclerViewAdapter<T, VH extends BaseViewHolder> extends 
     public void setItemClickListener(ItemClickListener itemClickListener) {
         this.itemClickListener = itemClickListener;
     }
-
-    @Override
-    public abstract VH onCreateViewHolder(ViewGroup parent, int viewType);
 
     @Override
     public void onBindViewHolder(VH holder, int position) {
@@ -69,4 +67,9 @@ public abstract class RecyclerViewAdapter<T, VH extends BaseViewHolder> extends 
     public int getItemCount() {
         return items.size();
     }
+
+    public abstract EmptyState getEmptyState();
+
+    @Override
+    public abstract VH onCreateViewHolder(ViewGroup parent, int viewType);
 }
