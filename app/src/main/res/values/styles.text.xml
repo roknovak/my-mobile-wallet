@@ -13,6 +13,10 @@
         <item name="android:textSize">@dimen/font_size_large</item>
     </style>
 
+    <style name="text.huge">
+        <item name="android:textSize">@dimen/font_size_huge</item>
+    </style>
+
     <style name="text.gray">
         <item name="android:textColor">@color/gray</item>
     </style>
@@ -23,6 +27,22 @@
 
     <style name="text.large.gray">
         <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="text.white">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="text.small.white">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="text.large.white">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="text.huge.white">
+        <item name="android:textColor">@color/white</item>
     </style>
 
 </resources>
