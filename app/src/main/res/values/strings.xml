@@ -32,5 +32,7 @@
     <string name="keep_me_logged_in">Keep me logged in</string>
 
     <string name="logout">Logout</string>
+    <string name="summary">Summary</string>
+    <string name="expense_details">Expense details</string>
 
 </resources>

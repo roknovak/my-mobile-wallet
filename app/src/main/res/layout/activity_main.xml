@@ -21,18 +21,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/rv_expenses"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <TextView
-                android:id="@+id/tv_empty_placeholder"
+            <LinearLayout
+                android:id="@+id/ll_expenses"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"
-                android:textSize="@dimen/font_size_large"
-                android:text="@string/no_expenses" />
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/include_summary"
+                    layout="@layout/layout_summary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/darker_gray" />
+
+                <com.rok.mymobilewallet.view.CustomRecyclerView
+                    android:id="@+id/rv_expenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
 
             <android.support.design.widget.FloatingActionButton
                 android:id="@+id/btn_add_new"

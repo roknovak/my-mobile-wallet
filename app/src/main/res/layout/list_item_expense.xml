@@ -1,37 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
             name="expense"
             type="com.rok.mymobilewallet.entity.Expense" />
+
+        <variable
+            name="listener"
+            type="com.rok.mymobilewallet.common.RecyclerViewAdapter.ItemClickListener" />
     </data>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="@{()->listener.onItemClicked(expense)}"
         android:padding="@dimen/eight_units_double">
 
         <TextView
             android:id="@+id/tv_title"
+            style="@style/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="16dp"
-            android:layout_toLeftOf="@+id/tv_amount"
+            android:layout_marginEnd="@dimen/eight_units_triple"
+            android:layout_toStartOf="@+id/tv_amount"
             android:text="@{expense.title}"
-            android:textColor="@color/black"
             tools:text="Title" />
 
         <TextView
+            android:id="@+id/tv_description"
+            style="@style/text.small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginEnd="@dimen/eight_units_triple"
+            android:layout_marginTop="@dimen/eight_units_single"
+            android:layout_toStartOf="@+id/tv_amount"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="@{expense.description}"
+            tools:text="Description" />
+
+        <TextView
             android:id="@+id/tv_amount"
+            style="@style/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:text="@{String.valueOf(expense.amount)}"
-            android:textColor="@color/black"
+            app:amount="@{expense.amount}"
             tools:text="0.00" />
 
     </RelativeLayout>

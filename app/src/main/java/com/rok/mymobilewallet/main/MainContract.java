@@ -18,14 +18,18 @@ public interface MainContract {
 
         void setExpenses(List<Expense> expenses);
 
-        void showEmptyPlaceholder();
+        void openAddNewExpenseActivity();
 
-        void hideEmptyPlaceholder();
+        void setSum(float sum);
+
+        void showEmptyStateLayout();
     }
 
     interface Presenter<V extends BaseContract.View> extends BaseContract.Presenter<V> {
 
         void onClick(android.view.View view);
+
+        void onActivityResult(int requestCode, int resultCode);
 
         boolean onOptionsItemSelected(MenuItem item);
     }
