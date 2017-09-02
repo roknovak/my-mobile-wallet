@@ -24,6 +24,7 @@ ext.library = [
 
         support_design    : "com.android.support:design:${version.support}",
         support_compat    : "com.android.support:appcompat-v7:${version.support}",
+        support_cardview  : "com.android.support:cardview-v7:${version.support}",
         support_constraint: "com.android.support.constraint:constraint-layout:${version.support_constraint}",
 
         rxjava            : "io.reactivex.rxjava2:rxjava:${version.rxjava}",

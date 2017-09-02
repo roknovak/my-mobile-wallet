@@ -43,6 +43,7 @@ dependencies {
     //app_dependencies
     implementation "${libs.support_design}"
     implementation "${libs.support_compat}"
+    implementation "${libs.support_cardview}"
     implementation "${libs.support_constraint}"
     implementation "${libs.dagger}"
     implementation "${libs.rxjava}"
