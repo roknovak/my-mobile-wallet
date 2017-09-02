@@ -12,10 +12,10 @@ import android.view.View;
 public class SnackBarUtil {
 
     public static void showSnackBar(@NonNull View view, @StringRes int string) {
-        Snackbar.make(view.findViewById(android.R.id.content), string, Snackbar.LENGTH_LONG).show();
+        Snackbar.make(view, string, Snackbar.LENGTH_LONG).show();
     }
 
     public static void showSnackBar(@NonNull View view, @NonNull String string) {
-        Snackbar.make(view.findViewById(android.R.id.content), string, Snackbar.LENGTH_LONG).show();
+        Snackbar.make(view, string, Snackbar.LENGTH_LONG).show();
     }
 }

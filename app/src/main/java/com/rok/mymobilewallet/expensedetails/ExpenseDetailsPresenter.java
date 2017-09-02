@@ -26,11 +26,10 @@ import io.reactivex.schedulers.Schedulers;
 
 public class ExpenseDetailsPresenter extends BasePresenter<ExpenseDetailsContract.View> implements ExpenseDetailsContract.Presenter<ExpenseDetailsContract.View> {
 
-    @Inject
-    ExpenseDataSource dataSource;
+    private ExpenseDataSource dataSource;
 
-    public ExpenseDetailsPresenter() {
-        MyMobileWalletApplication.getInstance().getAppComponent().inject(this);
+    public ExpenseDetailsPresenter(ExpenseDataSource dataSource) {
+        this.dataSource = dataSource;
     }
 
     @Override

@@ -1,5 +1,9 @@
 package com.rok.mymobilewallet.expensedetails;
 
+import android.support.annotation.NonNull;
+
+import com.rok.mymobilewallet.room.ExpenseDataSource;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -14,7 +18,7 @@ public class ExpenseDetailsModule {
 
     @Provides
     @Singleton
-    ExpenseDetailsContract.Presenter providesDetailsExpensePresenter() {
-        return new ExpenseDetailsPresenter();
+    ExpenseDetailsContract.Presenter providesDetailsExpensePresenter(@NonNull ExpenseDataSource dataSource) {
+        return new ExpenseDetailsPresenter(dataSource);
     }
 }

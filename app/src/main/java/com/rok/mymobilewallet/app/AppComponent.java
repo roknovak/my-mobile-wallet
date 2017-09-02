@@ -3,6 +3,7 @@ package com.rok.mymobilewallet.app;
 import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
+import com.rok.mymobilewallet.addexpense.AddExpensePresenter;
 import com.rok.mymobilewallet.expensedetails.ExpenseDetailsPresenter;
 
 import javax.inject.Singleton;
@@ -18,6 +19,4 @@ public interface AppComponent {
     Gson gson();
 
     SharedPreferences preferences();
-
-    void inject(ExpenseDetailsPresenter expenseDetailsPresenter);
 }
