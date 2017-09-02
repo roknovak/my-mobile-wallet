@@ -1,0 +1,28 @@
+<resources>
+
+    <style name="text">
+        <item name="android:textSize">@dimen/font_size_medium</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="text.small">
+        <item name="android:textSize">@dimen/font_size_small</item>
+    </style>
+
+    <style name="text.large">
+        <item name="android:textSize">@dimen/font_size_large</item>
+    </style>
+
+    <style name="text.gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="text.small.gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="text.large.gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+</resources>

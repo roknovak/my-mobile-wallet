@@ -4,8 +4,9 @@
     <color name="colorPrimaryDark">@color/deep_purple_800</color>
     <color name="colorAccent">@color/deep_purple_800</color>
 
-    <color name="white">#f5f5f5</color>
+    <color name="white">#ffffff</color>
     <color name="black">#1d1b1b</color>
+    <color name="gray">#918e8e</color>
 
     <color name="lime_A200">#eeff41</color>
 
