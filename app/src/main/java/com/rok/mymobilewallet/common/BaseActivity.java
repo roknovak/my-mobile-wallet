@@ -13,11 +13,9 @@ import javax.inject.Inject;
  * Created by Rok on 8. 07. 2017.
  */
 
-public abstract class BaseActivity<V extends ViewDataBinding, P extends BaseContract.Presenter> extends AppCompatActivity implements BaseContract.View {
+public abstract class BaseActivity<V extends ViewDataBinding> extends AppCompatActivity {
     protected final String TAG = getClass().getSimpleName();
 
-    @Inject
-    protected P presenter;
     protected V binding;
 
     @Override
@@ -25,13 +23,6 @@ public abstract class BaseActivity<V extends ViewDataBinding, P extends BaseCont
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, getLayout());
         setupDaggerComponent();
-        presenter.onTakeView(this);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        presenter.onDetach();
     }
 
     @LayoutRes

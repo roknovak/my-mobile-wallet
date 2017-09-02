@@ -11,7 +11,7 @@ import com.rok.mymobilewallet.R;
  * Created by Rok on 8. 07. 2017.
  */
 
-public abstract class ToolbarActivity<V extends ViewDataBinding, P extends BaseContract.Presenter> extends BaseActivity<V, P> {
+public abstract class ToolbarActivity<V extends ViewDataBinding, P extends BaseContract.Presenter> extends MvpActivity<V, P> {
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {

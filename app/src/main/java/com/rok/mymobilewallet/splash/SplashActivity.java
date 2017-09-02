@@ -7,12 +7,13 @@ import android.support.annotation.LayoutRes;
 
 import com.rok.mymobilewallet.R;
 import com.rok.mymobilewallet.common.BaseActivity;
+import com.rok.mymobilewallet.common.MvpActivity;
 import com.rok.mymobilewallet.databinding.ActivitySplashBinding;
 import com.rok.mymobilewallet.login.LoginActivity;
 import com.rok.mymobilewallet.main.MainActivity;
 import com.rok.mymobilewallet.utils.BundleUtil;
 
-public class SplashActivity extends BaseActivity<ActivitySplashBinding, SplashContract.Presenter> implements SplashContract.View {
+public class SplashActivity extends MvpActivity<ActivitySplashBinding, SplashContract.Presenter> implements SplashContract.View {
 
     @LayoutRes
     private final static int LAYOUT = R.layout.activity_splash;
