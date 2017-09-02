@@ -1,4 +1,4 @@
-package com.rok.mymobilewallet.sessionmanagement;
+package com.rok.mymobilewallet.storage;
 
 /**
  * Created by Rok on 2. 08. 2017.

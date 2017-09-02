@@ -2,7 +2,7 @@ package com.rok.mymobilewallet.app;
 
 import android.app.Application;
 
-import com.rok.mymobilewallet.sessionmanagement.Session;
+import com.rok.mymobilewallet.session.Session;
 
 /**
  * Created by Rok on 8. 07. 2017.

@@ -1,10 +1,12 @@
-package com.rok.mymobilewallet.sessionmanagement;
+package com.rok.mymobilewallet.session;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
 
 import com.rok.mymobilewallet.app.MyMobileWalletApplication;
 import com.rok.mymobilewallet.splash.SplashActivity;
+import com.rok.mymobilewallet.storage.Storage;
+import com.rok.mymobilewallet.storage.StorageUtil;
 
 /**
  * Created by Rok on 13. 08. 2017.

@@ -3,7 +3,7 @@ package com.rok.mymobilewallet.splash;
 import android.os.Handler;
 
 import com.rok.mymobilewallet.common.BasePresenter;
-import com.rok.mymobilewallet.sessionmanagement.Session;
+import com.rok.mymobilewallet.session.Session;
 
 
 /**

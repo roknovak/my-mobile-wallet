@@ -1,10 +1,11 @@
-package com.rok.mymobilewallet.sessionmanagement;
+package com.rok.mymobilewallet.storage;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.rok.mymobilewallet.app.AppComponent;
 import com.rok.mymobilewallet.app.MyMobileWalletApplication;
+import com.rok.mymobilewallet.session.Session;
 
 /**
  * Created by Rok on 2. 08. 2017.

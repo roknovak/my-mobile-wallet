@@ -1,4 +1,4 @@
-package com.rok.mymobilewallet.sessionmanagement;
+package com.rok.mymobilewallet.storage;
 
 import com.rok.mymobilewallet.helper.CustomTestRunner;
 

@@ -5,7 +5,7 @@ import android.view.View;
 
 import com.rok.mymobilewallet.R;
 import com.rok.mymobilewallet.common.BasePresenter;
-import com.rok.mymobilewallet.sessionmanagement.Session;
+import com.rok.mymobilewallet.session.Session;
 
 import java.util.UUID;
 
