@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 
 import com.google.gson.Gson;
 import com.rok.mymobilewallet.room.ExpenseDataSource;
+import com.rok.mymobilewallet.room.GroupDataSource;
 import com.rok.mymobilewallet.room.MyMobileWalletDatabase;
 
 import javax.inject.Singleton;
@@ -56,5 +57,11 @@ public class AppModule {
     @Singleton
     ExpenseDataSource providesExpenseDataSource(MyMobileWalletDatabase database) {
         return new ExpenseDataSource(database);
+    }
+
+    @Provides
+    @Singleton
+    GroupDataSource providesGroupDataSource(MyMobileWalletDatabase database) {
+        return new GroupDataSource(database);
     }
 }
