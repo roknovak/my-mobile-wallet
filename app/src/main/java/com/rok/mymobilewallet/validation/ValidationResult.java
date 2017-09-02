@@ -1,7 +1,5 @@
 package com.rok.mymobilewallet.validation;
 
-import android.support.annotation.StringRes;
-
 /**
  * Created by Rok on 3. 08. 2017.
  */

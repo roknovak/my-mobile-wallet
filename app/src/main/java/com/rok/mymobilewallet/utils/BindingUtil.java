@@ -4,8 +4,6 @@ import android.databinding.BindingAdapter;
 import android.support.annotation.StringRes;
 import android.widget.TextView;
 
-import com.rok.mymobilewallet.R;
-
 /**
  * Created by Rok on 20. 08. 2017.
  */

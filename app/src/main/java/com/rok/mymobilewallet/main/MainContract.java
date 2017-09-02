@@ -1,7 +1,6 @@
 package com.rok.mymobilewallet.main;
 
 import android.view.MenuItem;
-import android.view.View;
 
 import com.rok.mymobilewallet.common.BaseContract;
 import com.rok.mymobilewallet.entity.Expense;

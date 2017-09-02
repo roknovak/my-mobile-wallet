@@ -10,9 +10,11 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+
 import com.rok.mymobilewallet.common.RecyclerViewAdapter;
 import com.rok.mymobilewallet.databinding.LayoutEmptyBinding;
 import com.rok.mymobilewallet.entity.EmptyState;
+
 import java.util.Collection;
 
 /**

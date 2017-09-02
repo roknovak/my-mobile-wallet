@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
-import android.support.v7.widget.DividerItemDecoration;
-import android.support.v7.widget.LinearLayoutManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -27,8 +25,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
-
-import io.reactivex.Observable;
 
 public class MainActivity extends ToolbarActivity<ActivityMainBinding, MainContract.Presenter> implements MainContract.View, View.OnClickListener, RecyclerViewAdapter.ItemClickListener<Expense> {
 

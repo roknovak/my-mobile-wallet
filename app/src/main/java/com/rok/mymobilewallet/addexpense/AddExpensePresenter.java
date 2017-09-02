@@ -5,22 +5,18 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.rok.mymobilewallet.R;
-import com.rok.mymobilewallet.app.MyMobileWalletApplication;
 import com.rok.mymobilewallet.common.BasePresenter;
 import com.rok.mymobilewallet.entity.Expense;
+import com.rok.mymobilewallet.room.ExpenseDataSource;
 import com.rok.mymobilewallet.utils.ResultCode;
 
 import java.util.Calendar;
 import java.util.Date;
 
-import javax.inject.Inject;
-
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
-
-import com.rok.mymobilewallet.room.ExpenseDataSource;
 
 /**
  * Created by Rok on 8. 07. 2017.

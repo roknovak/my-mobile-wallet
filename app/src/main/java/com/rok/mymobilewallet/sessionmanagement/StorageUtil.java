@@ -5,10 +5,6 @@ import android.support.annotation.Nullable;
 
 import com.rok.mymobilewallet.app.AppComponent;
 import com.rok.mymobilewallet.app.MyMobileWalletApplication;
-import com.rok.mymobilewallet.sessionmanagement.NonPersistentStorage;
-import com.rok.mymobilewallet.sessionmanagement.PersistentStorage;
-import com.rok.mymobilewallet.sessionmanagement.Session;
-import com.rok.mymobilewallet.sessionmanagement.Storage;
 
 /**
  * Created by Rok on 2. 08. 2017.

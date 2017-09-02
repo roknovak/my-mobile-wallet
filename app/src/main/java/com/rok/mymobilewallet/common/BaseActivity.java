@@ -7,8 +7,6 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import javax.inject.Inject;
-
 /**
  * Created by Rok on 8. 07. 2017.
  */

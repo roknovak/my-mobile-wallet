@@ -1,7 +1,6 @@
 package com.rok.mymobilewallet.room;
 
 import com.rok.mymobilewallet.entity.Expense;
-import com.rok.mymobilewallet.room.MyMobileWalletDatabase;
 
 import java.util.ArrayList;
 import java.util.Calendar;

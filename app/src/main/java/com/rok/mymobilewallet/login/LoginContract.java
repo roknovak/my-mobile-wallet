@@ -1,7 +1,6 @@
 package com.rok.mymobilewallet.login;
 
 import android.support.annotation.StringRes;
-import android.view.View;
 
 import com.rok.mymobilewallet.common.BaseContract;
 

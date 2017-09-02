@@ -2,7 +2,6 @@ package com.rok.mymobilewallet.addexpense;
 
 import android.support.annotation.StringRes;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.rok.mymobilewallet.common.BaseContract;
 

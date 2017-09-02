@@ -1,8 +1,5 @@
 package com.rok.mymobilewallet.login;
 
-import com.rok.mymobilewallet.splash.SplashContract;
-import com.rok.mymobilewallet.splash.SplashPresenter;
-
 import javax.inject.Singleton;
 
 import dagger.Module;

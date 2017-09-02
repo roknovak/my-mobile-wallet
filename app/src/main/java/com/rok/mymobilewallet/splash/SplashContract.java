@@ -1,7 +1,5 @@
 package com.rok.mymobilewallet.splash;
 
-import android.os.Bundle;
-
 import com.rok.mymobilewallet.common.BaseContract;
 
 /**

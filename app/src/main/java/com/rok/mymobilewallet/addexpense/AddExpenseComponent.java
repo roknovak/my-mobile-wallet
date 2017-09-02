@@ -1,8 +1,6 @@
 package com.rok.mymobilewallet.addexpense;
 
 import com.rok.mymobilewallet.app.AppModule;
-import com.rok.mymobilewallet.splash.SplashActivity;
-import com.rok.mymobilewallet.splash.SplashModule;
 
 import javax.inject.Singleton;
 

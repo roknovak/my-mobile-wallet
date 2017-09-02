@@ -2,11 +2,9 @@ package com.rok.mymobilewallet.splash;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 
 import com.rok.mymobilewallet.R;
-import com.rok.mymobilewallet.common.BaseActivity;
 import com.rok.mymobilewallet.common.MvpActivity;
 import com.rok.mymobilewallet.databinding.ActivitySplashBinding;
 import com.rok.mymobilewallet.login.LoginActivity;

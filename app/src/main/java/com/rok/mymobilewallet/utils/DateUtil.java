@@ -1,7 +1,6 @@
 package com.rok.mymobilewallet.utils;
 
 import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

@@ -4,20 +4,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
-import android.support.annotation.MenuRes;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.view.View;
 
 import com.rok.mymobilewallet.R;
-import com.rok.mymobilewallet.common.BaseActivity;
 import com.rok.mymobilewallet.common.FormActivity;
 import com.rok.mymobilewallet.databinding.ActivityLoginBinding;
-import com.rok.mymobilewallet.databinding.ActivitySplashBinding;
 import com.rok.mymobilewallet.main.MainActivity;
-import com.rok.mymobilewallet.splash.DaggerSplashComponent;
-import com.rok.mymobilewallet.splash.SplashContract;
-import com.rok.mymobilewallet.splash.SplashModule;
 
 public class LoginActivity extends FormActivity<ActivityLoginBinding, LoginContract.Presenter> implements LoginContract.View, View.OnClickListener {
 

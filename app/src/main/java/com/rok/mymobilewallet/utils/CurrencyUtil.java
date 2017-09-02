@@ -1,9 +1,7 @@
 package com.rok.mymobilewallet.utils;
 
 import java.text.DecimalFormat;
-import java.text.DecimalFormatSymbols;
 import java.util.Currency;
-import java.util.Locale;
 
 /**
  * Created by Rok on 20. 08. 2017.

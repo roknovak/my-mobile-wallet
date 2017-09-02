@@ -3,8 +3,6 @@ package com.rok.mymobilewallet.addexpense;
 import android.support.annotation.NonNull;
 
 import com.rok.mymobilewallet.room.ExpenseDataSource;
-import com.rok.mymobilewallet.splash.SplashContract;
-import com.rok.mymobilewallet.splash.SplashPresenter;
 
 import javax.inject.Singleton;
 
